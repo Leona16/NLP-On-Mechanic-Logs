@@ -7,7 +7,7 @@ This project uses Natural Language Processing (NLP) to simplify and analyze mech
 - Text preprocessing (tokenization, stopword removal)
 - Keyword matching
 - Problem-solution mapping
-- Simple web interface using Flask
+- Simple web interface using Flask.
 
 ## Technologies Used
 - Python
