@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI Vehicle Log Analyzer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="bg-slate-900 text-white min-h-screen flex items-center justify-center"
+  >
+    <div class="w-full max-w-2xl bg-slate-800 rounded-2xl shadow-2xl p-6">
+      <h1 class="text-2xl font-bold text-center mb-4">
+        🚗 AI Vehicle Log Analyzer
+      </h1>
+
+      <form method="POST" class="space-y-4">
+        <textarea
+          name="log"
+          required
+          class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700"
+          placeholder="Describe the issue..."
+        ></textarea>
+
+        <select
+          name="vehicle"
+          required
+          class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700"
+        >
+          <option value="">Select Vehicle</option>
+          <option value="car">Car</option>
+          <option value="bike">Bike</option>
+          <option value="truck">Truck</option>
+        </select>
+
+        <button
+          type="submit"
+          class="w-full bg-blue-500 hover:bg-blue-600 p-3 rounded-lg"
+        >
+          Analyze Log
+        </button>
+      </form>
+
+      {% if result %}
+      <div class="mt-6 p-4 bg-slate-900 rounded-xl border border-slate-700">
+        <h2 class="text-lg font-semibold mb-2">Result</h2>
+        <p>{{ result }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
